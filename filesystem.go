@@ -252,7 +252,7 @@ func (fs *sivaFS) ensureOpen() error {
 		return nil
 	}
 
-	f, err := fs.underlying.OpenFile(fs.path, os.O_CREATE|os.O_RDWR, 0666)
+	f, err := fs.underlying.OpenFile(fs.path, os.O_RDONLY, 0644)
 	if err != nil {
 		return err
 	}
